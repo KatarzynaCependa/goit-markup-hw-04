@@ -9,6 +9,7 @@
   --background-gray: #2f303a;
   --border-bottom-gray: #ececec;
   --border-gray: #eeeeee;
+  --icons-gray: #afb1b8;
 }
 
 body {
@@ -104,8 +105,15 @@ figcaption {
   color: var(--logo-blue);
 }
 
-.contact-details a:not(:first-child) {
+/* .contact-details a:not(:first-child) {
   margin-left: 50px;
+} */
+
+.icon-envelope {
+  fill: var(--text-light-gray);
+  width: 16px;
+  height: 12px;
+  vertical-align: middle;
 }
 
 .header-contact {
@@ -120,6 +128,13 @@ figcaption {
 .header-contact:hover,
 .header-contact:focus {
   color: var(--logo-blue);
+}
+
+.icon-smartphone {
+  fill: var(--text-light-gray);
+  width: 16px;
+  height: 12px;
+  vertical-align: middle;
 }
 
 /* Main */
@@ -239,6 +254,20 @@ figcaption {
   justify-content: center;
   flex-direction: column;
   padding: 30px;
+}
+
+/* Nasi klienci */
+
+.clients-icon {
+  fill: var(--icons-gray);
+  border: 1px solid var(--icons-gray);
+  border-radius: 4px;
+}
+
+.clients-box {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
 }
 
 /* Footer */
