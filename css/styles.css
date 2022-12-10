@@ -440,6 +440,7 @@ figcaption {
   border: none;
   outline: none;
   padding: 6px 22px;
+  background-color: var(--buttons-background-gray);
 }
 
 .buttons:hover,
