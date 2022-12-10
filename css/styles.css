@@ -10,6 +10,7 @@
   --border-bottom-gray: #ececec;
   --border-gray: #eeeeee;
   --icons-gray: #afb1b8;
+  --background-overlay: rgba(47, 48, 58, 0.4);
 }
 
 body {
@@ -105,17 +106,6 @@ figcaption {
   color: var(--logo-blue);
 }
 
-/* .contact-details a:not(:first-child) {
-  margin-left: 50px;
-} */
-
-.icon-envelope {
-  fill: var(--text-light-gray);
-  width: 16px;
-  height: 12px;
-  vertical-align: middle;
-}
-
 .header-contact {
   font-weight: 500;
   font-size: 14px;
@@ -123,6 +113,7 @@ figcaption {
   letter-spacing: 0.02em;
   color: var(--text-light-gray);
   text-decoration: none;
+  /* margin-left: 30px; */
 }
 
 .header-contact:hover,
@@ -130,11 +121,17 @@ figcaption {
   color: var(--logo-blue);
 }
 
+.header-contact:first-child {
+  margin-right: 30px;
+}
+.icon-envelope {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 .icon-smartphone {
-  fill: var(--text-light-gray);
-  width: 16px;
-  height: 12px;
-  vertical-align: middle;
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 /* Main */
@@ -144,6 +141,10 @@ figcaption {
 .background-hdr {
   background-color: var(--background-gray);
   padding: 200px 0;
+  background-image: linear-gradient(var(--background-overlay), var(--background-overlay)),
+    url(../images/header/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .header-primary {
@@ -181,12 +182,25 @@ figcaption {
   margin-bottom: -94px;
 }
 
+.background-strenghts {
+  width: 270px;
+  height: 120px;
+  background-color: var(--buttons-background-gray);
+}
+
+.strenghts-icon {
+  margin: 25px 100px;
+  background-color: var(--buttons-background-gray);
+  border-width: 100px;
+}
+
 .header-tertiary {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-black);
+  padding: 30px 0 10px 0;
 }
 
 .header-tertiary-item {
@@ -232,6 +246,13 @@ figcaption {
   border-radius: 0px 0px 4px 4px;
 }
 
+.name-profession {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0 0;
+}
+
 .name {
   font-weight: 500;
   line-height: 1.19;
@@ -249,25 +270,52 @@ figcaption {
   color: var(--text-light-gray);
 }
 
-.name-profession {
+.team-icons-box {
   display: flex;
+  gap: 10px;
   justify-content: center;
-  flex-direction: column;
-  padding: 30px;
+  margin: 16px 0 30px 0;
+}
+
+.team-social {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  color: var(--icons-gray);
+  border-radius: 50%;
+}
+
+.team-social:hover,
+.team-social:focus {
+  background-color: var(--logo-blue);
+  color: var(--logo-white);
+}
+
+.team-social-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
 }
 
 /* Nasi klienci */
-
-.clients-icon {
-  fill: var(--icons-gray);
-  border: 1px solid var(--icons-gray);
-  border-radius: 4px;
-}
 
 .clients-box {
   display: flex;
   justify-content: center;
   column-gap: 30px;
+}
+
+.clients-icon {
+  border: 1px solid var(--icons-gray);
+  border-radius: 4px;
+  fill: var(--icons-gray);
+}
+
+.clients-icon:hover,
+.clients-icon:focus {
+  border-color: var(--logo-blue);
+  fill: var(--logo-blue);
 }
 
 /* Footer */
@@ -320,6 +368,27 @@ figcaption {
   text-decoration: underline;
 }
 
+.team-social-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.team-social-footer {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  color: var(--icons-gray);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.team-social-footer:hover,
+.team-social-footer:focus {
+  background-color: var(--logo-blue);
+  color: var(--logo-white);
+}
+
 /* PORTFOLIO */
 
 /* Filtry */
@@ -348,6 +417,9 @@ figcaption {
 .buttons:focus {
   background: var(--logo-blue);
   color: var(--logo-white);
+  cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Portfolio */
@@ -361,6 +433,12 @@ figcaption {
 .portfolio-box-item {
   box-sizing: border-box;
   flex-basis: calc((100% - 60px) / 3);
+}
+
+.portfolio-box-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 .portfolio-box-item figcaption {
